@@ -28,11 +28,14 @@
         <template v-for="l in languagesTab" :key="l.id">
             <article class=" bg-neutral-900 group rounded-md">
                 <div>
-                <NuxtImg :src="l.image"/>
+                <NuxtImg :src="l.image" :alt="l.alt"/>
                 </div>
                 <div class="p-4">
                     <h3 class="font-[Inter] " >{{ l.name }}</h3>
                     <p>{{ l.description }}</p>
+                    <div class="a-tag-flex">
+                        <NuxtLink :href="l.link" class="text-blue-400">Visit Website <Icon name="heroicons:arrow-top-right-on-square"/></NuxtLink>
+                    </div>
                 </div>
             </article>
         </template>
@@ -74,19 +77,43 @@
     </section>
 </template>
 <script setup lang="ts">
-const competencies=ref([
+const showcase=ref([
     {
-         id:1,type:'programming',name:'HTML',description:'Standard language for structuring content on the web.',
-           image:'/Images/competencies/html.webp',alt:'Javascript Image',color:'text-orange-400'
+         id:1,type:'website',name:'MarketMind',description:'A simple market bucket list manager',
+           image:'/Images/showcase/websites/marketmind.png',alt:'MarketMind Image',
+           link:'https://marketmindapp.netlify.app',
+           tags:[
+            {
+              id:10,name:'Nuxt',link:'https://nuxt.com/',color:'bg-green-500 hover:bg-green-400'
+           },
+           {
+              id:11,name:'Vuetify',link:'https://vuetifyjs.com/en/',color:'bg-blue-500 hover:bg-blue-400'
+           },
+           
+
+        ],
+           color:'text-orange-400'
     },
     {
-         id:2,type:'programming',name:'CSS',description:'Standard language for styling and visually presenting content on the web.',
-         image:'/Images/competencies/css.jpeg',alt:'CSS Image',color:'text-blue-400'
+         id:2,type:'website',name:'Mathify',description:'A free online unit converter and algebra solver.',
+         image:'/Images/showcase/websites/mathify.png',alt:'Mathify Image',
+         link:'https://mathifyapp.netlify.app',
+         tags:[
+            {
+              id:12,name:'Vue',link:'https://vuejs.org/',color:'bg-green-500 hover:bg-green-400.'
+           },
+           {
+              id:13,name:'Tailwind CSS',link:'https://https://tailwindcss.com/',color:'bg-cyan-500 hover:bg-cyan-400'
+           },
+           
+
+        ],
+        color:'text-blue-400'
     },
 
     {
-        id:3,type:'programming',name:'Javascript',description:'Versatile, high-level programming language used to create interactive content on websites.',
-        image:'/Images/competencies/javascript.jpg',alt:'Javascript Image',color:'text-yellow-400'
+        id:3,type:'website',name:'Recipus',description:'Free meal recipes app.',
+        image:'/Images/showcase/websites/recipus.png',alt:'Recipus Image',color:'text-yellow-400'
     },
 
     {
@@ -137,30 +164,34 @@ const competencies=ref([
     
 ])
 const languagesTab=computed(()=>{
-    return competencies.value.filter((c)=>{
-        return c.type==="programming"
+    return showcase.value.filter((c)=>{
+        return c.type==="website"
     })
 })
 const webTab=computed(()=>{
-    return competencies.value.filter((c)=>{
+    return showcase.value.filter((c)=>{
         return c.type==="web"
     })
 })
 const designTab=computed(()=>{
-    return competencies.value.filter((c)=>{
+    return showcase.value.filter((c)=>{
         return c.type==="design"
     })
 })
 const tabButtons=ref([
     {
-        id:1,name:'Languages',isActive:true
+        id:1,name:'Websites',isActive:true
     },
     {
-        id:2,name:'Web Development',isActive:false
+        id:2,name:'Logos',isActive:false
     },
     {
-        id:3,name:'Design',isActive:false
-    }
+        id:3,name:'Flyers',isActive:false
+    },
+    {
+        id:4,name:'Cards',isActive:false
+    },
+
 
 ])
 const tabsVisibility=ref([true,false,false])

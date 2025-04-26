@@ -1,9 +1,14 @@
 <template>
     <div>
         <ContentMainHero/>
+
         <ContentMainAbout/>
-        <ContentMainSkills/>
+        <UISeperatorIcon id="skills"/>
+        <ContentMainSkills />
+        <UISeperatorIcon id="services"/>
         <ContentMainServices/>
+        <UISeperatorIcon id="showcase"/>
+        <ContentMainShowcase/>
          <ImageModal/>
 
        

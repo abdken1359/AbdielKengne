@@ -1,5 +1,5 @@
 <template>
-    <section id="services" class="a-container my-10">
+    <section id="services" class="a-container">
         <UIHeadings title="Quality Services I Ought To Implement" subtitle="Enhacing your life in the best way possible is my main goal. I ought to bring my customers the best experience possible."/>
     <div class="mt-5 a-service-grid">
       <template v-for="s in services" :key="s.id">

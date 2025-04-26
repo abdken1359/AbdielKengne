@@ -17,7 +17,7 @@
 
 </style>
 <template>
-    <section id="about" class="my-10 a-container " ref="target" >
+    <section class="mt-10 a-container " ref="target" >
         <Transition name="about">
        <section class="a-about-flex" >
        <div class="a-about-item">

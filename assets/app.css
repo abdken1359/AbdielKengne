@@ -89,6 +89,12 @@
         }
 
     }
+    .a-tag-flex{
+        @apply flex gap-4 flex-row justify-end mt-4;
+        .a-tag-item{
+            @apply px-2 py-1 rounded-md;
+        }
+    }
 }
 @layer utilities{
      .a-about-flex{
