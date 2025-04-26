@@ -100,7 +100,7 @@ const competencies=ref([
 
     {
          id:6,type:'programming',name:'GIT',description:'Version control system to manage code changes efficiently.',
-        image:'/Images/competencies/git.webp',alt:'C# Image',color:'text-violet-400'
+        image:'/Images/competencies/git.webp',alt:'GIT Image',color:'text-violet-400'
     },
     {
          id:7,type:'web',name:'Vue JS',description:'Progressive JavaScript framework for building interactive, component-based user interfaces and single-page applications.',
