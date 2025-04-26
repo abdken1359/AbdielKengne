@@ -13,7 +13,8 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
         isImageModalVisible.value=false
         imageSrc.value=''
         imageAlt.value=''
-        document.documentElement.style.overflow='visible'
+        document.documentElement.style.overflowY='visible'
+        document.documentElement.style.overflowX='hidden'
     }
      
     return{

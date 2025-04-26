@@ -3,6 +3,7 @@
         <ContentMainHero/>
         <ContentMainAbout/>
         <ContentMainSkills/>
+        <ContentMainServices/>
          <ImageModal/>
 
        

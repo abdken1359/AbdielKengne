@@ -15,7 +15,7 @@
     <section>
     <div class="a-tab-list my-10">
         <template v-for="t in tabButtons" :key="t.id">
-            <button type="button" class="rounded-lg hover:bg-neutral-900" :class="t.isActive?'bg-white hover:bg-white text-black':''"
+            <button type="button" class="rounded-lg hover:bg-neutral-900" :class="t.isActive?'bg-white hover:bg-white text-teal-900':''"
             @click="switchTabs(t.id)"
             >
                 {{ t.name }}</button>
@@ -99,8 +99,8 @@ const competencies=ref([
     },
 
     {
-         id:6,type:'programming',name:'C#',description:'Modern, object-oriented programming language widely used for games and enterprise software.',
-        image:'/Images/competencies/c#.webp',alt:'C# Image',color:'text-violet-400'
+         id:6,type:'programming',name:'GIT',description:'Version control system to manage code changes efficiently.',
+        image:'/Images/competencies/git.webp',alt:'C# Image',color:'text-violet-400'
     },
     {
          id:7,type:'web',name:'Vue JS',description:'Progressive JavaScript framework for building interactive, component-based user interfaces and single-page applications.',
