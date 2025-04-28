@@ -34,7 +34,7 @@
                     <h3 class="font-[Inter] " >{{ l.name }}</h3>
                     <p>{{ l.description }}</p>
                     <div class="a-tag-flex">
-                        <NuxtLink :href="l.link" class="text-blue-400">Visit Website <Icon name="heroicons:arrow-top-right-on-square"/></NuxtLink>
+                        <NuxtLink :href="l.link" target="_blank" class="text-blue-400 hover:underline">Visit Website <Icon name="heroicons:arrow-top-right-on-square"/></NuxtLink>
                     </div>
                 </div>
             </article>
@@ -43,18 +43,12 @@
     </div>
 </Transition>
 <Transition name="tab">
-    <div v-show="tabsVisibility[1]" class="a-tab-grid">
-        <template v-for="w in webTab" :key="w.id">
-            <article class=" bg-neutral-900 group rounded-md overflow-hidden">
-                <div>
-                <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 "/>
-                </div>
-                <div class="p-4">
-                    <h3 class="font-[Inter]">{{ w.name }}</h3>
-                    <p>{{ w.description }}</p>
-                </div>
-            </article>
-        </template>
+    <div v-show="tabsVisibility[1]" class="a-logo-grid">
+       <template v-for="l in logosTab" :key="l.id">
+    <article class="a-logo-section">
+        <NuxtImg :src="l.image" :alt="l.alt"/>
+    </article>
+</template>
         
     </div>
 </Transition>
@@ -113,49 +107,45 @@ const showcase=ref([
 
     {
         id:3,type:'website',name:'Recipus',description:'Free meal recipes app.',
-        image:'/Images/showcase/websites/recipus.png',alt:'Recipus Image',color:'text-yellow-400'
+        image:'/Images/showcase/websites/recipus.png',alt:'Recipus Image',color:'text-yellow-400',
+        link:'https://recipusapp.netlify.app'
     },
 
     {
-        id:4,type:'programming',name:'Typescript',description:'Typed superset of JavaScript that adds static type checking for more robust code.',
-        image:'/Images/competencies/typescript.png',alt:'Typescript Image',color:'text-sky-400'
+        id:4,type:'logos',
+        image:'/Images/showcase/logos/bear.jpg',alt:'The Great Bear Logo',inview:false,
     },
     {
-        id:5,type:'programming',name:'Python',description:'High-level, general-purpose programming language known for its readability and versatility.',
-        image:'/Images/competencies/python.webp',alt:'Python Image',color:'text-indigo-400'
-    },
-
-    {
-         id:6,type:'programming',name:'GIT',description:'Version control system to manage code changes efficiently.',
-        image:'/Images/competencies/git.webp',alt:'C# Image',color:'text-violet-400'
+        id:5,type:'logos',
+        image:'/Images/showcase/logos/dg.jpg',alt:'Dylan Grayson Logo',inview:false,
     },
     {
-         id:7,type:'web',name:'Vue JS',description:'Progressive JavaScript framework for building interactive, component-based user interfaces and single-page applications.',
-        image:'/Images/competencies/web_development/vue.jpg',alt:'Vue JS Image'
+        id:6,type:'logos',
+        image:'/Images/showcase/logos/bloomnest.jpg',alt:'BloomNest Logo',inview:false,
     },
     {
-         id:8,type:'web',name:'Nuxt',description:'High-level framework built on Vue.js that simplifies the development of server-rendered, static, and single-page web applications.',
-        image:'/Images/competencies/web_development/nuxt.png',alt:'Nuxt Image'
+        id:7,type:'logos',
+        image:'/Images/showcase/logos/lila.jpg',alt:'Lila Belle Logo',inview:false,
     },
     {
-         id:9,type:'web',name:'Tailwind CSS',description:'Utility-first CSS framework for rapidly building custom, responsive user interfaces directly in your markup.',
-        image:'/Images/competencies/web_development/tailwind.webp',alt:'Tailwind Image'
-    },
-    /*{
-        id:9,type:'web',name:'Vuetify',description:'Material Design component framework for Vue.js that provides pre-designed, customizable UI elements for building clean, responsive applications.',
-        image:'/Images/competencies/web_development/vuetify.jpg',alt:'Vuetify Image'
-    },*/
-    {
-        id:10,type:'web',name:'Alpine JS',description:'Lightweight JavaScript framework for adding interactivity to HTML with a minimal, declarative syntax.',
-        image:'/Images/competencies/web_development/alpine.jpg',alt:'Alpine JS Image'
+        id:8,type:'logos',
+        image:'/Images/showcase/logos/swiftleaf.jpg',alt:'Swift Leaf Logo',inview:false,
     },
     {
-        id:11,type:'web',name:'jQuery',description:'Fast, lightweight JavaScript library that simplifies HTML manipulation, event handling, animations, and AJAX interactions.',
-        image:'/Images/competencies/web_development/jQuery.jpg',alt:'jQuery Image'
+        id:9,type:'logos',
+        image:'/Images/showcase/logos/aquapulse.jpg',alt:'Aquapulse Logo',inview:false,
     },
     {
-        id:12,type:'web',name:'HTMX',description:'Modern JavaScript library that enables dynamic, AJAX-powered web interactions using simple HTML attributes.',
-        image:'/Images/competencies/web_development/htmx.png',alt:'HTMX Image'
+        id:10,type:'logos',
+        image:'/Images/showcase/logos/sage.jpg',alt:'Sage Logo',inview:false,
+    },
+    {
+        id:11,type:'logos',
+        image:'/Images/showcase/logos/tinytrail.jpg',alt:'Tinytrail Logo',inview:false,
+    },
+    {
+        id:12,type:'logos',
+        image:'/Images/showcase/logos/sunnybites.jpg',alt:'Sunny Bites Logo',inview:false,
     },
     {
         id:13,type:'design',name:'Canva',description:'User-friendly graphic design platform that allows you to create visuals, presentations, and social media content.',
@@ -168,9 +158,9 @@ const languagesTab=computed(()=>{
         return c.type==="website"
     })
 })
-const webTab=computed(()=>{
+const logosTab=computed(()=>{
     return showcase.value.filter((c)=>{
-        return c.type==="web"
+        return c.type==="logos"
     })
 })
 const designTab=computed(()=>{
