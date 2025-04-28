@@ -10,6 +10,7 @@
         <UISeperatorIcon id="showcase"/>
         <ContentMainShowcase/>
          <ImageModal/>
+         <UIMainLightbox/>
 
        
     </div>

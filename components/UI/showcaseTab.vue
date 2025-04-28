@@ -46,7 +46,7 @@
     <div v-show="tabsVisibility[1]" class="a-logo-grid">
        <template v-for="l in logosTab" :key="l.id">
     <article class="a-logo-section">
-        <NuxtImg :src="l.image" :alt="l.alt"/>
+        <NuxtImg :src="l.image" :alt="l.alt" @click="showLightBox(l.image,l.alt,logosTab)"/>
     </article>
 </template>
         
@@ -71,6 +71,7 @@
     </section>
 </template>
 <script setup lang="ts">
+const {showLightBox,closeLightBox}=useUtilitiesStore()
 const showcase=ref([
     {
          id:1,type:'website',name:'MarketMind',description:'A simple market bucket list manager',

@@ -17,11 +17,34 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
         document.documentElement.style.overflowX='hidden'
     }
      
+    const isLightboxVisible=ref(false)
+    const imageInView=ref<String>('/Images/space.jpg')
+    const imageInViewAlt=ref<String>('heythere')
+    const imageQueue=ref<Object[]>([])
+    const showLightBox=(UserImageInView:string,UserImageInViewAlt:string,UserImageQueue:Object[]):void=>{
+        isLightboxVisible.value=true
+        imageInView.value=UserImageInView
+        imageInViewAlt.value=UserImageInViewAlt
+        imageQueue.value=UserImageQueue
+
+    }
+    const closeLightBox=():void=>{
+        isLightboxVisible.value=false
+        imageInView.value=''
+        imageInViewAlt.value=''
+        imageQueue.value.length=0
+    }
     return{
         isImageModalVisible,
         imageAlt,
         imageSrc,
         openImageModal,
-        closeImageModal
+        closeImageModal,
+        isLightboxVisible,
+        showLightBox,
+        closeLightBox,
+        imageInView,
+        imageInViewAlt,
+        imageQueue,
     }
 })
