@@ -1,30 +1,6 @@
 <template>
-    <div>
-        <ContentMainHero/>
-
-        <ContentMainAbout/>
-        <UISeperatorIcon id="skills"/>
-        <ContentMainSkills />
-        <UISeperatorIcon id="services"/>
-        <ContentMainServices/>
-        <UISeperatorIcon id="showcase"/>
-        <ContentMainShowcase/>
-         <ImageModal/>
-         <UIMainLightbox/>
-
-       
+    <div class="a-container">
+        <h1>Hello world!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deserunt eaque quibusdam ea corporis repellendus obcaecati blanditiis quidem molestiae. Repellendus illo cupiditate praesentium? Fugit quo necessitatibus, laudantium esse vero expedita!</p>
     </div>
 </template>
-<script setup lang="ts">
-import ImageModal from '~/components/UI/imageModal.vue';
-
-   useHead({
-    title:'AK',
-    
-   })
-   definePageMeta({
-    pageTransition:{
-        name:'blur'
-    }
-   })
-</script>

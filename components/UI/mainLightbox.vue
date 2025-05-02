@@ -13,7 +13,8 @@
 </style>
 <template>
     <Transition name="lightbox">
-    <div class="bg-neutral-900/90 fixed top-0 left-0 right-0 overflow-hidden bottom-0 z-40" v-show="utils.isLightboxVisible">
+    <div class="bg-neutral-900/80 fixed top-0 left-0 right-0 overflow-hidden bottom-0 z-50" 
+    v-show="utils.isLightboxVisible" @click.stop="blockScroll()">
         <button class="absolute top-10 right-10 z-50" aria-label="Close Lightbox" @click.stop="utils.closeLightBox">
             <Icon name="fe:close" class="text-3xl md:text-2xl lg:text-4xl"/>
         </button>
@@ -26,7 +27,7 @@
             </button>
             <Transition name="lightbox">
             <img :src="utils.imageQueue[utils.imageLightBoxIndex]?.image" :alt="utils.imageInViewAlt" v-show="utils.isLightboxVisible" 
-            class="mx-auto md:flex-1 h-[30vh]   md:h-auto my-auto md:w-1/2"/>
+            class="mx-auto md:flex-1 h-[30vh]   md:h-auto my-auto md:w-1/2" @click="blockScroll()"/>
         </Transition>
             <button class="relative h-max my-auto ml-auto disabled:text-gray-400 disabled:cursor-auto flex-1" 
             @click.stop="utils.nextImage()" :disabled="utils.isNextButtonDisabled">
@@ -34,9 +35,15 @@
             </button>
             
         </section>
-        <section class="flex a-container items-center flex-wrap justify-center gap-4">
+        <section class=" a-container hidden md:flex items-center flex-wrap justify-center gap-4">
             <template v-for="i in utils.imageQueue" :key="i.id">
                 <img :src="i.image" :alt="i.alt" class=" md:w-15 cursor-pointer hover:opacity-90 md:h-15 lg:w-20 lg:h-20" 
+                :class="i.inview?'':' opacity-25'"  @click.stop="utils.goToImage(i.image,utils.imageQueue)"/>
+            </template>
+        </section>
+        <section class=" a-container md:hidden flex items-center flex-wrap justify-center gap-4">
+            <template v-for="i in utils.imageQueue" :key="i.id">
+                <img :src="i.image" :alt="i.alt" class=" md:w-15 cursor-pointer hover:opacity-90 w-10 h-10 md:h-15 lg:w-20 lg:h-20" 
                 :class="i.inview?'':' opacity-25'"  @click.stop="utils.goToImage(i.image,utils.imageQueue)"/>
             </template>
         </section>
@@ -60,21 +67,11 @@
     }
 })*/
 const utils=useUtilitiesStore();
-/*onMounted(()=>{
-    window.addEventListener('keydown',(e)=>{
-        if (e.key==="ArrowRight"){
-            
-            if(utils.imageLightBoxIndex===utils.imageQueue.length-1){
-                e.preventDefault()
-
-            }else{
-                utils.nextImage()
-            }
-        }
-        if(e.key==="ArrowLeft"){
-            utils.previousImage()
-        }
-    })
-})*/
+const mobileView=computed(()=>{
+    return utils.imageQueue.slice(utils.imageLightBoxIndex,2)
+})
+const blockScroll=()=>{
+     document.documentElement.style.overflow='hidden'
+}
 
 </script>

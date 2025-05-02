@@ -17,12 +17,12 @@
 const message=ref("Hello world!")
 useHead({
   htmlAttrs:{
-    class:'dark',
+    
     lang:'en'
   },
   link:[
     {
-      rel:'icon', type:'image/svg+xml', href:'/ak_favicon.svg'
+      rel:'icon', type:'image/svg+xml', href:'/akfav.svg'
     }
   ]
 })

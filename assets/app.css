@@ -11,13 +11,13 @@
         @apply overflow-x-hidden scroll-smooth;
     }
     body{
-        @apply min-h-screen bg-neutral-950 text-gray-50;
-        font-family: 'Inter','Arial';
+        @apply min-h-screen  text-gray-800;
+        font-family: 'Poppins','Arial';
         font-size: 1rem;
     }
     h1,h2,h3,h4,h5,h6{
         font-family: 'Lora' ,'DM Serif','Georgia';
-        @apply text-gray-50 font-bold mb-4;
+        @apply text-gray-900 font-bold mb-4;
 
     }
     h1{

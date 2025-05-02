@@ -47,7 +47,7 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
              
 
         });
-        console.log(imageLightBoxIndex.value)
+        document.documentElement.style.overflow="hidden"
 
     }
     const nextImage=():void=>{
@@ -61,6 +61,7 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
 
             
           });
+          document.documentElement.style.overflow="hidden"
          
     }
     const previousImage=():void=>{
@@ -74,6 +75,7 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
 
             
           });
+          document.documentElement.style.overflow="hidden"
         
   }
   const goToImage=(userImageView:string,userImagesecondQueue:object[])=>{
@@ -88,6 +90,7 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
 
         
       });
+      document.documentElement.style.overflow="hidden"
 
 
   }
@@ -95,6 +98,8 @@ export const useUtilitiesStore=defineStore('UtilitiesStore',()=>{
         isLightboxVisible.value=false
         imageInView.value=''
         imageInViewAlt.value=''
+        document.documentElement.style.overflowY="visible"
+        document.documentElement.style.overflowX="hidden"
         
     }
     return{
