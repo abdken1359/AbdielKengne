@@ -4,3 +4,8 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deserunt eaque quibusdam ea corporis repellendus obcaecati blanditiis quidem molestiae. Repellendus illo cupiditate praesentium? Fugit quo necessitatibus, laudantium esse vero expedita!</p>
     </div>
 </template>
+<script lang="ts" setup>
+useSeoMeta({
+    title:'Abdiel Kengne'
+})
+</script>
