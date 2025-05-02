@@ -3,8 +3,9 @@
         <div class="mr-auto">
           <NuxtLink to="/" class="font-bold  flex items-center flex-row justify-center gap-4">
             <NuxtImg src="/akfav.svg" alt="Ak logo" class=" w-8"/><div class=" text-lg md:text-xl font-[Poppins]">
-                <span>abdiel</span><span class="text-violet-500"> Kengne</span></div>
+                <span>abdiel</span><span class="text-blue-800"> Kengne</span></div>
         </NuxtLink>  
         </div>
     </nav>
 </template>
+<script setup lang="ts"></script>
