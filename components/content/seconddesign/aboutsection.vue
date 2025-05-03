@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gray-50">
+    <section class="bg-gray-50 border-y-2 border-gray-200">
         <div class="a-container py-10 grid grid-cols-1 gap-4 items-center">
         <div>
             <h1>A Glimpse into my personality</h1>
