@@ -6,6 +6,7 @@
 </template>
 <script lang="ts" setup>
 useSeoMeta({
-    title:'Abdiel Kengne'
+    title:'Abdiel Kengne',
+    description:'Hello, I am Abdiel Kengne, a curious. enthousisatic, and visionary web and graphic designer.'
 })
 </script>
