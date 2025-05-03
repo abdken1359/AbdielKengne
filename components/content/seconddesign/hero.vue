@@ -5,7 +5,7 @@
             <p>Hi, I am</p>
             <h1 class=" text-5xl md:text-6xl lg:text-7xl font-[Poppins]">Abdiel Kengne</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus aliquid minima unde dolorem officia, totam assumenda nisi reiciendis officiis sequi deleniti expedita, veritatis fugit aliquam aut dolores nihil ducimus veniam.</p>
-            <div class="my-4 flex items-center gap-4 md:gap-6 flex-wrap">
+            <div class="my-4 grid items-center grid-cols-1 md:grid-cols-2  gap-4 ">
                 <template v-for="l in littleabout" :key="l.id">
                     <div>
                     <span class="font-[Poppins] text-xl font-bold mb-2">{{ l.title }}</span>
@@ -13,7 +13,7 @@
                 </div>
                 </template>
             </div>
-            <button class=" bg-blue-600  text-white">Download CV</button>
+            <button class=" bg-blue-600 hover:bg-blue-500 hidden lg:flex text-white">Download CV</button>
         </div>
         <div class="w-full lg:w-1/2">
             <NuxtImg src="/Images/heroblue.png"/>
@@ -27,10 +27,10 @@ const littleabout=ref([
         id:1,title:'UI/UX Specialist', subtitle:'A seasoned UI/UX Strategist dedicated to bridging creativity'
     },
     {
-        id:2,title:'Graphic Designer',subtitle:'A FDF'
+        id:2,title:'Graphic Designer',subtitle:'Designing appealing and impactful graphics.'
     },
-    {
+   /* {
         id:3,title:'Canada',subtitle:'Based'
-    }
+    }*/
 ])
 </script>
