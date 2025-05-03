@@ -5,7 +5,7 @@
 }
 @layer base{
     *{
-        @apply transition-all duration-150 ease-in-out selection:bg-teal-400 selection:text-black
+        @apply transition-all duration-150 ease-in-out
     }
     html{
         @apply overflow-x-hidden scroll-smooth;
