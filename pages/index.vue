@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 useSeoMeta({
     title:'Abdiel Kengne',
-    ogTitle:'Abdiel Kegne',
+    ogTitle:'Abdiel Kengne',
     description:'Hello, I am Abdiel Kengne, a curious. enthousisatic, and visionary web and graphic designer.',
     ogDescription:'Hello, I am Abdiel Kengne, a curious. enthousisatic, and visionary web and graphic designer.',
     ogImage:'/akog.png',
