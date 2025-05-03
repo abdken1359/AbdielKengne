@@ -1,7 +1,7 @@
 <template>
     <section>
-        <div class="flex my-5 md:my-10 items-center lg:w-[90%] flex-col lg:flex-row gap-4">
-        <div class="w-full a-container  lg:w-1/2">
+        <div class="flex my-5 md:my-10 items-center lg:px-10 justify-center flex-col lg:flex-row gap-4">
+        <div class="w-full a-container  lg:w-1/2 ">
             <p>Hi, I am</p>
             <h1 class=" text-5xl md:text-6xl lg:text-7xl font-[Poppins]">Abdiel Kengne</h1>
             <p>I am a curious, enthusiastic, and visionary frontend web developer, graphic designer, and UI/UX specialist with a creative mindset for
