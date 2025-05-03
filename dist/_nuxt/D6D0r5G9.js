@@ -1,1 +1,0 @@
-import{_ as n}from"./DlxEQvW5.js";import{_ as r}from"./DlAUqK2U.js";import{c as a,a as s,b as _,d as t,w as c,o as m}from"./D8_iBjpA.js";const l={};function u(d,o){const e=n;return m(),a("div",null,[s("p",null,[_(e,{to:"/"},{default:c(()=>o[0]||(o[0]=[t("Go here")])),_:1}),o[1]||(o[1]=t("Welcome to about"))])])}const x=r(l,[["render",u]]);export{x as default};
