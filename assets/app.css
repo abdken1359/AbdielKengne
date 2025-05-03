@@ -38,7 +38,7 @@
     p{
         font-size: 1rem;
     }
-    button{
+    button,.button{
         @apply flex items-center justify-center text-center px-4 py-2 cursor-pointer
     }
     img{

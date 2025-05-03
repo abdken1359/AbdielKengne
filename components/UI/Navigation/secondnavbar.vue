@@ -13,7 +13,7 @@
             
         </div>
         <div class="hidden ml-auto lg:flex">
-            <button class="bg-violet-600 hover:bg-violet-500  text-white rounded-md">Download CV</button>
+            <button class="bg-blue-600 hover:bg-blue-500  text-white ">Download CV</button>
         </div>
         <div class="flex items-center ml-auto lg:hidden">
             <button aria-label="Open menu"> <Icon name="ri:menu-3-fill" class="text-2xl"/></button>
