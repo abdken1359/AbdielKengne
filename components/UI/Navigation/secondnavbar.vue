@@ -8,7 +8,7 @@
         </div>
         <div class="mx-auto hidden lg:flex justify-center flex-1 items-center">
             <template v-for="n in navLinks" :key="n.id">
-                <NuxtLink :to="n.href" class="mr-4 hover:text-blue-600">{{ n.name }}</NuxtLink>
+                <NuxtLink :to="n.href" class="mr-4 hover:text-blue-600" :class="n.isActive?'text-blue-600':''">{{ n.name }}</NuxtLink>
             </template>
             
         </div>

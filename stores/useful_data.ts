@@ -18,7 +18,15 @@ export const useUsefulData=defineStore('UsefulData',()=>{
         }
 
     ])
+    const dealWithIntersects=(position:number):void=>{
+        console.log(`${position} Clicked!`)
+        navLinks.value.forEach((n)=>{
+            n.id===position?n.isActive=true:n.isActive=false
+
+        })
+    }
     return{
-        navLinks
+        navLinks,
+        dealWithIntersects,
     }
 })

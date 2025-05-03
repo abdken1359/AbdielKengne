@@ -2,7 +2,7 @@
     <section>
         <div class="flex  md:my-0 lg:my-10 items-center lg:px-10 justify-center flex-col lg:flex-row gap-4">
         <div class="w-full a-container  lg:w-1/2 ">
-            <p>Hi, I am</p>
+            <p ref="heroSection">Hi, I am</p>
             <h1 class=" text-5xl mb-5 md:text-6xl lg:text-7xl font-[Poppins]">Abdiel Kengne</h1>
             <p>I am a curious, enthusiastic, and visionary frontend web developer, graphic designer, and UI/UX specialist with a creative mindset for
                  crafting impactful experiences.</p>
@@ -34,4 +34,12 @@ const littleabout=ref([
         id:3,title:'Canada',subtitle:'Based'
     }*/
 ])
+const{dealWithIntersects} =useUsefulData()
+const heroSection=ref(null)
+const isHeroVisible=useElementVisibility(heroSection)
+watch(isHeroVisible,(newVal)=>{
+     if(newVal===true){
+       dealWithIntersects(1)
+     }
+})
 </script>
