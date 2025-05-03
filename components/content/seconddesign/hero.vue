@@ -8,7 +8,7 @@
             <div class="my-4 grid items-center grid-cols-1 md:grid-cols-2  gap-4 ">
                 <template v-for="l in littleabout" :key="l.id">
                     <div>
-                    <span class="font-[Poppins] text-xl font-bold mb-2">{{ l.title }}</span>
+                    <span class=" text-xl font-bold mb-2">{{ l.title }}</span>
                     <p>{{ l.subtitle }}</p>
                 </div>
                 </template>
@@ -16,7 +16,7 @@
             <button class=" bg-blue-600 hover:bg-blue-500 hidden lg:flex text-white">Download CV</button>
         </div>
         <div class="w-full lg:w-1/2">
-            <NuxtImg src="/Images/heroblue.png"/>
+            <NuxtImg src="/Images/heroblue.png" alt="Aesthetic image of graphic design elements"/>
         </div>
         </div>
     </section>
