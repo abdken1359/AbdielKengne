@@ -7,6 +7,13 @@
 <script lang="ts" setup>
 useSeoMeta({
     title:'Abdiel Kengne',
-    description:'Hello, I am Abdiel Kengne, a curious. enthousisatic, and visionary web and graphic designer.'
+    ogTitle:'Abdiel Kegne',
+    description:'Hello, I am Abdiel Kengne, a curious. enthousisatic, and visionary web and graphic designer.',
+    ogDescription:'Hello, I am Abdiel Kengne, a curious. enthousisatic, and visionary web and graphic designer.',
+    ogImage:'/akog.png',
+    ogUrl:'https://abdielkengne.netlify.app',
+    ogType:'website',
+    ogSiteName:'Abdiel Kengne',
+    ogLocale:'en_US'
 })
 </script>
