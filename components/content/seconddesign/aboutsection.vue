@@ -5,7 +5,7 @@
             <h1 class="a-container" >About</h1>
             <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             <div>
-            <NuxtImg src="/Images/youngman.png" class=" outline-2 outline-sky-600"/>
+            <NuxtImg src="/Images/youngman.png" class=" outline-2 outline-sky-600" alt="Young man"/>
         </div>
         <div>
            <h2>Bio</h2>
@@ -14,7 +14,7 @@
                  improve, and build with purpose.</p> 
         </div>
         <div>
-            <h2 ref="aboutsection">Skills</h2>
+            <h2 ref="aboutsection" id="about">Skills</h2>
         </div>
     </section>
         
@@ -24,6 +24,12 @@
     </section>
 </template>
 <script setup lang="ts">
+interface Skills{
+    id:number,
+    name:string,
+    color:string,
+    length:number
+}
 const {dealWithIntersects}=useUsefulData()
 const aboutsection=ref(null)
 const isAboutVisible=useElementVisibility(aboutsection)
@@ -32,5 +38,9 @@ watch(isAboutVisible,(newVal)=>{
         dealWithIntersects(2)
     }
 })
-console.log(isAboutVisible.value)
+const skills=ref<Skills[]>([
+    {
+
+    }
+])
 </script>
