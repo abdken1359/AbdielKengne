@@ -33,8 +33,10 @@ interface NavLinks{
 
         })
     }
+    let showNavMenu=ref(false)
     return{
         navLinks,
         dealWithIntersects,
+        showNavMenu,
     }
 })
