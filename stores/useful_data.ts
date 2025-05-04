@@ -1,6 +1,11 @@
 export const useUsefulData=defineStore('UsefulData',()=>{
-
-    const navLinks=ref([
+interface NavLinks{
+    id:number,
+    name:string,
+    href:string,
+    isActive:boolean
+}
+    const navLinks=ref<NavLinks[]>([
         {
             id:1,name:'Home',href:'#',isActive:true
         },
@@ -8,13 +13,16 @@ export const useUsefulData=defineStore('UsefulData',()=>{
             id:2,name:'About',href:'#about',isActive:false
         },
         {
-            id:3,name:'Services',href:'#services',isActive:false
+            id:3,name:'Skills',href:'#skills',isActive:false
         },
         {
-            id:4,name:'Showcase',href:'#showcase',isActive:false
+            id:4,name:'Services',href:'#services',isActive:false
         },
         {
-            id:5,name:'Contact',href:'#contact',isActive:false
+            id:5,name:'Showcase',href:'#showcase',isActive:false
+        },
+        {
+            id:6,name:'Contact',href:'#contact',isActive:false
         }
 
     ])
