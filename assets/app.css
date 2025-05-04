@@ -17,7 +17,7 @@
     }
     h1,h2,h3,h4,h5,h6{
         font-family: 'Poppins' ,'DM Serif','Georgia';
-        @apply text-gray-800 font-bold;
+        @apply text-gray-800 font-bold mb-2;
 
     }
     h1{
