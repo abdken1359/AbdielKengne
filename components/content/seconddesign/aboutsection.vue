@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gray-50 border-y-1 border-gray-200">
+    <section class="bg-blue-50 border-y-1 border-gray-200">
         
         <div class="a-container py-5 ">
             <h1 class="a-container" >About</h1>
@@ -9,9 +9,26 @@
         </div>
         <div>
            <h2>Who am I</h2>
-            <p ref="aboutsection" id="about">I’m a self-taught developer with a strong curiosity for how things work and
+            <p ref="aboutsection" id="about" class="mb-4">I’m a self-taught developer with a strong curiosity for how things work and
                  a deep interest in building for the web. What began as a hobby quickly grew into a focused journey of learning and creating. I’ve spent countless hours exploring online tutorials, experimenting with small projects, and developing my problem-solving mindset. I enjoy the process of turning ideas into real, usable experiences and continuously push myself to learn,
-                 improve, and build with purpose.</p> 
+                 improve, and build with purpose.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <section>
+            <h2>Passions</h2> 
+           <ul>
+            <li>💻 Programming</li>
+            <li>⚽ Soccer</li>
+            <li>🎶 Music</li>
+           </ul>
+        </section>
+        <section>
+            <h2>Qualities</h2> 
+            <ul>
+                <li>🔍 Details Oriented</li>
+            </ul>
+        </section>
+        </div>
+            
         </div>
         <div class="hidden">
             <h2 >Skills</h2>

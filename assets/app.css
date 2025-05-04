@@ -45,6 +45,10 @@
         @apply object-cover object-center w-full;
          
     }
+    li{
+        @apply mb-2
+        
+    }
 }
 @layer components{
     .a-container{
