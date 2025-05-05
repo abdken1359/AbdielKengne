@@ -74,7 +74,7 @@
         @apply flex flex-wrap flex-row gap-4 justify-center items-baseline
     }
     .a-tab-grid{
-        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center mx-auto gap-4;
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center mx-auto gap-4;
         img{
             @apply rounded-t-lg;
         }

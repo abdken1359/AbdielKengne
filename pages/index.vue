@@ -2,6 +2,7 @@
     <div>
         <ContentSeconddesignHero/>
         <ContentSeconddesignAboutsection/>
+        <ContentSeconddesignSkills/>
 
     </div>
 </template>

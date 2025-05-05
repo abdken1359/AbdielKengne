@@ -15,7 +15,7 @@
     <section>
     <div class="a-tab-list my-10">
         <template v-for="t in tabButtons" :key="t.id">
-            <button type="button" class="rounded-lg hover:bg-neutral-900" :class="t.isActive?'bg-white hover:bg-white text-teal-900':''"
+            <button type="button" class="rounded-md  " :class="t.isActive?'bg-blue-500 hover:bg-blue-500 hover:text-blue-50 text-blue-50':' hover:text-blue-500'"
             @click="switchTabs(t.id)"
             >
                 {{ t.name }}</button>
@@ -26,12 +26,12 @@
     <Transition name="tab">
     <div v-show="tabsVisibility[0]" class="a-tab-grid">
         <template v-for="l in languagesTab" :key="l.id">
-            <article class=" bg-neutral-900 group rounded-md">
+            <article class="shadow-sm hover:shadow-md overflow-hidden group rounded-md">
                 <div>
-                <NuxtImg :src="l.image"/>
+                <NuxtImg :src="l.image" :alt="l.alt" class="group-hover:scale-x-105"/>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-[Inter] " >{{ l.name }}</h3>
+                    <h3>{{ l.name }}</h3>
                     <p>{{ l.description }}</p>
                 </div>
             </article>
@@ -42,9 +42,9 @@
 <Transition name="tab">
     <div v-show="tabsVisibility[1]" class="a-tab-grid">
         <template v-for="w in webTab" :key="w.id">
-            <article class=" bg-neutral-900 group rounded-md overflow-hidden">
+            <article class=" group rounded-md shadow-md hover:shadow-lg overflow-hidden">
                 <div>
-                <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 "/>
+                <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 border-b-1 border-gray-100"/>
                 </div>
                 <div class="p-4">
                     <h3 class="font-[Inter]">{{ w.name }}</h3>
@@ -58,9 +58,9 @@
 <Transition name="tab">
     <div v-show="tabsVisibility[2]" class="a-tab-grid">
         <template v-for="w in designTab" :key="w.id">
-            <article class=" bg-neutral-900 mx-auto group rounded-md overflow-hidden">
+            <article class=" mx-auto group shadow-md hover:shadow-lg rounded-md overflow-hidden">
                 <div>
-                <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 "/>
+                <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105"/>
                 </div>
                 <div class="p-4">
                     <h3 class="font-[Inter]">{{ w.name }}</h3>
@@ -85,7 +85,7 @@ const competencies=ref([
     },
 
     {
-        id:3,type:'programming',name:'Javascript',description:'Versatile, high-level programming language used to create interactive content on websites.',
+        id:3,type:'programming',name:'Javascript',description:'High-level programming language used to create interactive content on websites.',
         image:'/Images/competencies/javascript.jpg',alt:'Javascript Image',color:'text-yellow-400'
     },
 
@@ -94,7 +94,7 @@ const competencies=ref([
         image:'/Images/competencies/typescript.png',alt:'Typescript Image',color:'text-sky-400'
     },
     {
-        id:5,type:'programming',name:'Python',description:'High-level, general-purpose programming language known for its readability and versatility.',
+        id:5,type:'programming',name:'Python',description:'High-level, general-purpose and simple programming language.',
         image:'/Images/competencies/python.webp',alt:'Python Image',color:'text-indigo-400'
     },
 
@@ -103,11 +103,11 @@ const competencies=ref([
         image:'/Images/competencies/git.webp',alt:'GIT Image',color:'text-violet-400'
     },
     {
-         id:7,type:'web',name:'Vue JS',description:'Progressive JavaScript framework for building interactive, component-based user interfaces and single-page applications.',
+         id:7,type:'web',name:'Vue JS',description:'Progressive JavaScript framework for building interactive user interfaces and single-page applications.',
         image:'/Images/competencies/web_development/vue.jpg',alt:'Vue JS Image'
     },
     {
-         id:8,type:'web',name:'Nuxt',description:'High-level framework built on Vue.js that simplifies the development of server-rendered, static, and single-page web applications.',
+         id:8,type:'web',name:'Nuxt',description:'High-level framework built on Vue.js that simplifies the development of complex web applications.',
         image:'/Images/competencies/web_development/nuxt.png',alt:'Nuxt Image'
     },
     {
