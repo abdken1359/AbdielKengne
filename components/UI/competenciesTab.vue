@@ -15,7 +15,7 @@
     <section>
     <div class="a-tab-list my-10">
         <template v-for="t in tabButtons" :key="t.id">
-            <button type="button" class="rounded-md  " :class="t.isActive?'bg-blue-500 hover:bg-blue-500 hover:text-blue-50 text-blue-50':' hover:text-blue-500'"
+            <button type="button" class="rounded-md  " :class="t.isActive?'bg-blue-500 hover:bg-blue-500 hover:text-blue-50 text-white':' hover:text-blue-500'"
             @click="switchTabs(t.id)"
             >
                 {{ t.name }}</button>
@@ -31,7 +31,7 @@
                 <NuxtImg :src="l.image" :alt="l.alt" class="group-hover:scale-x-105"/>
                 </div>
                 <div class="p-4">
-                    <h3>{{ l.name }}</h3>
+                    <h2>{{ l.name }}</h2>
                     <p>{{ l.description }}</p>
                 </div>
             </article>
@@ -47,7 +47,7 @@
                 <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 border-b-1 border-gray-100"/>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-[Inter]">{{ w.name }}</h3>
+                    <h2 class="font-[Inter]">{{ w.name }}</h2>
                     <p>{{ w.description }}</p>
                 </div>
             </article>
@@ -63,7 +63,7 @@
                 <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105"/>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-[Inter]">{{ w.name }}</h3>
+                    <h2 class="font-[Inter]">{{ w.name }}</h2>
                     <p>{{ w.description }}</p>
                 </div>
             </article>
