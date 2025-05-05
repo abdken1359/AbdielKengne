@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-blue-50 border-y-1 border-gray-200">
+    <section class="bg-blue-50 border-y-1 border-blue-200"  id="about">
         
         <div class="a-container py-5 ">
            <UITitles text="About" link="#about" ref="aboutsection"/>
@@ -9,7 +9,7 @@
         </div>
         <div>
            <h2>Who am I?</h2>
-            <p  id="about" class="mb-4">I’m a self-taught developer with a strong curiosity for how things work and
+            <p  class="mb-4">I’m a self-taught developer with a strong curiosity for how things work and
                  a deep interest in building for the web. What began as a hobby quickly grew into a focused journey of learning and creating. I’ve spent countless hours exploring online tutorials, experimenting with small projects, and developing my problem-solving mindset. I enjoy the process of turning ideas into real, usable experiences and continuously push myself to learn,
                  improve, and build with purpose.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

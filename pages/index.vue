@@ -3,10 +3,13 @@
         <ContentSeconddesignHero/>
         <ContentSeconddesignAboutsection/>
         <ContentSeconddesignSkills/>
+        <ContentSeconddesignServices/>
 
     </div>
 </template>
 <script lang="ts" setup>
+import { ContentSeconddesignServices } from '#components';
+
 useSeoMeta({
     title:'Abdiel Kengne',
     ogTitle:'Abdiel Kengne',
