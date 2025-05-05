@@ -1,5 +1,5 @@
 <template>
-    <div class="sticky top-0 z-20">
+    <div class="sticky top-0 z-20" ref="navBar">
     <nav class="flex items-center bg-white overflow-hidden  h-16 px-6 md:px-10 lg:px-16 ">
         <div class="mr-auto">
           <NuxtLink to="/" class="font-bold  flex items-center flex-row justify-center gap-4">
@@ -31,4 +31,8 @@ const toggleMenu=():void=>{
    useful.showNavMenu=!useful.showNavMenu
     console.log(useful.showNavMenu)
 }
+const navBar=ref(null)
+onClickOutside(navBar,(e)=>{
+    useful.showNavMenu=false
+})
 </script>

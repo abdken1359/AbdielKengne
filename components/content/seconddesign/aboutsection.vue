@@ -2,14 +2,14 @@
     <section class="bg-blue-50 border-y-1 border-gray-200">
         
         <div class="a-container py-5 ">
-           <UITitles text="About" link="#about"/>
+           <UITitles text="About" link="#about" ref="aboutsection"/>
             <section class="grid grid-cols-1 lg:grid-cols-2  gap-4 items-center">
             <div>
             <NuxtImg src="/Images/youngman.png" class=" md:w-[70%] lg:w-[90%] outline-2 outline-sky-600" alt="Young man"/>
         </div>
         <div>
            <h2>Who am I?</h2>
-            <p ref="aboutsection" id="about" class="mb-4">I’m a self-taught developer with a strong curiosity for how things work and
+            <p  id="about" class="mb-4">I’m a self-taught developer with a strong curiosity for how things work and
                  a deep interest in building for the web. What began as a hobby quickly grew into a focused journey of learning and creating. I’ve spent countless hours exploring online tutorials, experimenting with small projects, and developing my problem-solving mindset. I enjoy the process of turning ideas into real, usable experiences and continuously push myself to learn,
                  improve, and build with purpose.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
