@@ -125,4 +125,16 @@
             @apply text-4xl
         }
      }
+     .bg-rose-500{
+        @apply bg-rose-500
+     }
+     .text-rose-500{
+        @apply text-rose-500
+     }
+     .bg-cyan-500{
+        @apply bg-cyan-500
+     }
+     .text-cyan-500{
+        @apply text-cyan-500
+     }
 }

@@ -4,13 +4,13 @@
             <UITitles text="Services" link="#services" color="after:bg-teal-500" ref="servicesSection"/>
             <section class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
                 <template v-for="s in services" :key="s.id">
-                    <div class="p-4 rounded-sm  shadow-md hover:shadow-lg">
+                    <div class="p-4 rounded-sm bg-white  shadow-md hover:shadow-lg">
                         <div class="p-3 w-1/5 text-center flex items-center justify-center text-white
                          rounded-sm" :class="`bg-${s.color}-500`">
                             <Icon :name="s.icon" class="text-lg"/>
                         </div>
                         <div class="mt-4">
-                            <span class="text-xl md:text-2xl font-bold" :class="`text-${s.color}-500`">{{ s.title }}</span>
+                            <span class="text-xl md:text-2xl font-bold" :class="`text-${s.color.toString()}-500`">{{ s.title }}</span>
                               <p class="mt-4">{{ s.description }}</p>
                         </div>
                     </div>
@@ -32,16 +32,16 @@ const services=ref<Services[]>([
     {
         id:1,
         icon:'ri:star-fill',
-        color:'violet',
+        color:'cyan',
         title:'Static Web Design',
-        description:'Creating and enhancing user friendly static Portfolios, Online documentations, and '
+        description:'Creating and enhancing user friendly static Portfolios, Online documentations, and Blogs.'
     },
     {
         id:2,
-        icon:'ri:star-fill',
-        color:'green',
-        title:'Static Web Design',
-        description:'Creating and enhancing user friendly static Portfolios, Online documentations, and '
+        icon:'ri:heart-fill',
+        color:'rose',
+        title:'Digital creations',
+        description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
     }
 ])
 const useful=useUsefulData()
