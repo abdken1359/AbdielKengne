@@ -1,7 +1,55 @@
 <template>
-    <section class="bg-red-50 border-y-1 border-gray-200" id="services">
+    <section class="bg-teal-50 mt-5 border-y-1 border-gray-200" id="services" >
         <div class="a-container py-5 ">
-            <UITitles text="Services" link="#services" ref="aboutsection"/>
+            <UITitles text="Services" link="#services" color="after:bg-teal-500" ref="servicesSection"/>
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
+                <template v-for="s in services" :key="s.id">
+                    <div class="p-4 rounded-sm  shadow-md hover:shadow-lg">
+                        <div class="p-3 w-1/5 text-center flex items-center justify-center text-white
+                         rounded-sm" :class="`bg-${s.color}-500`">
+                            <Icon :name="s.icon" class="text-lg"/>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-xl md:text-2xl font-bold" :class="`text-${s.color}-500`">{{ s.title }}</span>
+                              <p class="mt-4">{{ s.description }}</p>
+                        </div>
+                    </div>
+                </template>
+            </section>
             </div>
     </section>
 </template>
+<script setup lang="ts">
+interface Services{
+    id:number,
+    icon:string,
+    color:string,
+    title:string,
+    description:string
+
+}
+const services=ref<Services[]>([
+    {
+        id:1,
+        icon:'ri:star-fill',
+        color:'violet',
+        title:'Static Web Design',
+        description:'Creating and enhancing user friendly static Portfolios, Online documentations, and '
+    },
+    {
+        id:2,
+        icon:'ri:star-fill',
+        color:'green',
+        title:'Static Web Design',
+        description:'Creating and enhancing user friendly static Portfolios, Online documentations, and '
+    }
+])
+const useful=useUsefulData()
+const servicesSection=ref(null)
+const isServicesSectionVisible=useElementVisibility(servicesSection)
+watch(isServicesSectionVisible,(newVal)=>{
+    if (newVal==true){
+        useful.dealWithIntersects(4)
+    }
+})
+</script>

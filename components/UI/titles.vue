@@ -3,7 +3,7 @@
 
         <h1
         class="relative after:absolute after:w-1/2 after:h-2 after:bg-blue-500 after:-bottom-2 after:left-0"
-        ><span class="mr-2 group-hover:text-blue-500 hidden transition-all duration-100
+        :class="color?color:'after:bg-blue-500'"><span class="mr-2 group-hover:text-blue-500 hidden transition-all duration-100
               ">#</span><NuxtLink :href="link" class="group-hover:translate-y-10">{{ text }}</NuxtLink></h1>
     </div>
 </template>
@@ -16,6 +16,10 @@ defineProps({
     link:{
         type:String,
         required:true
+    },
+    color:{
+        type:String,
+        required:false
     }
 })
 </script>

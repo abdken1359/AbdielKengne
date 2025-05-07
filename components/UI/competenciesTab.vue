@@ -31,7 +31,7 @@
                 <NuxtImg :src="l.image" :alt="l.alt" class="group-hover:scale-x-105"/>
                 </div>
                 <div class="p-4">
-                    <h2>{{ l.name }}</h2>
+                    <div class="text-xl font-bold mb-4 md:text-2xl">{{ l.name }}</div>
                     <p>{{ l.description }}</p>
                 </div>
             </article>
@@ -47,7 +47,7 @@
                 <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 border-b-1 border-gray-100"/>
                 </div>
                 <div class="p-4">
-                    <h2 class="font-[Inter]">{{ w.name }}</h2>
+                    <div class=" text-xl mb-4 font-bold md:text-2xl">{{ w.name }}</div>
                     <p>{{ w.description }}</p>
                 </div>
             </article>
@@ -63,7 +63,7 @@
                 <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105"/>
                 </div>
                 <div class="p-4">
-                    <h2 class="font-[Inter]">{{ w.name }}</h2>
+                    <div class="text-xl font-bold mb-4 md:text-2xl">{{ w.name }}</div>
                     <p>{{ w.description }}</p>
                 </div>
             </article>

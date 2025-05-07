@@ -82,12 +82,12 @@
     .a-service-grid{
         @apply grid grid-cols-1 md:grid-cols-2 justify-center lg:grid-cols-3 place-items-center mx-auto gap-4;
         .a-service-content{
-            @apply bg-neutral-900 p-4 rounded-lg;
+            @apply rounded-lg;
             .a-service-icon{
                 @apply p-3 rounded-lg flex items-center justify-center text-center w-1/5 mb-5;
             }
             .a-service-title{
-                @apply font-[Inter] text-xl lg:text-2xl font-bold;
+                @apply font-bold;
                 
             }
         }
