@@ -34,12 +34,19 @@ const services=ref<Services[]>([
         icon:'ri:star-fill',
         color:'cyan',
         title:'Static Web Design',
-        description:'Creating and enhancing user friendly static Portfolios, Online documentations, and Blogs.'
+        description:'Creating and enhancing accessible and user friendly static Portfolios, Online documentations, and Blogs.'
     },
     {
         id:2,
         icon:'ri:heart-fill',
         color:'rose',
+        title:'Digital creations',
+        description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
+    },
+    {
+        id:3,
+        icon:'ri:heart-fill',
+        color:'yellow',
         title:'Digital creations',
         description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
     }

@@ -137,4 +137,7 @@
      .text-cyan-500{
         @apply text-cyan-500
      }
+     .bg-yellow-500{
+        @apply bg-yellow-500
+     }
 }
