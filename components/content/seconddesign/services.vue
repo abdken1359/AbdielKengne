@@ -1,7 +1,7 @@
 <template>
     <section class="bg-teal-50 mt-5 border-y-1 border-gray-200" id="services" >
         <div class="a-container py-5 ">
-            <UITitles text="Services" link="#services" color="after:bg-teal-500" ref="servicesSection"/>
+            <UITitles text="Services" link="#services" color="after:bg-teal-400" ref="servicesSection"/>
             <section class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
                 <template v-for="s in services" :key="s.id">
                     <div class="p-4 rounded-sm bg-white  shadow-md hover:shadow-lg">
@@ -32,8 +32,8 @@ const services=ref<Services[]>([
     {
         id:1,
         icon:'ri:star-fill',
-        color:'cyan',
-        title:'Static Web Design',
+        color:'indigo',
+        title:'Static web design',
         description:'Creating and enhancing accessible and user friendly static Portfolios, Online documentations, and Blogs.'
     },
     {
@@ -45,9 +45,23 @@ const services=ref<Services[]>([
     },
     {
         id:3,
-        icon:'ri:heart-fill',
-        color:'yellow',
-        title:'Digital creations',
+        icon:'ri:focus-3-line',
+        color:'emerald',
+        title:'Brand visuals',
+        description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
+    },
+    {
+        id:4,
+        icon:'ri:mac-line',
+        color:'sky',
+        title:'UI mockups',
+        description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
+    },
+    {
+        id:5,
+        icon:'ri:pencil-fill',
+        color:'orange',
+        title:'Content writing',
         description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
     }
 ])

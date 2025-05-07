@@ -131,13 +131,28 @@
      .text-rose-500{
         @apply text-rose-500
      }
-     .bg-cyan-500{
-        @apply bg-cyan-500
+     .bg-indigo-500{
+        @apply bg-indigo-500
      }
-     .text-cyan-500{
-        @apply text-cyan-500
+     .text-indigo-500{
+        @apply text-indigo-500
      }
-     .bg-yellow-500{
-        @apply bg-yellow-500
+     .bg-emerald-500{
+        @apply bg-emerald-500
+     }
+     .text-emerald-500{
+        @apply text-emerald-500
+     }
+     .bg-sky-500{
+        @apply bg-sky-500
+     }
+     .text-sky-500{
+        @apply text-sky-500
+     }
+     .bg-orange-500{
+        @apply bg-orange-500
+     }
+     .text-orange-500{
+        @apply text-orange-500
      }
 }
