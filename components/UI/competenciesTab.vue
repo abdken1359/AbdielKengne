@@ -13,9 +13,9 @@
 </style>
 <template>
     <section>
-    <div class="a-tab-list my-10">
+    <div class="a-tab-list my-8">
         <template v-for="t in tabButtons" :key="t.id">
-            <button type="button" class="rounded-md  " :class="t.isActive?'bg-blue-500 hover:bg-blue-500 hover:text-blue-50 text-white':' hover:text-blue-500'"
+            <button type="button" class="rounded-md  " :class="t.isActive?'bg-indigo-500 hover:bg-indigo-500 hover:text-blue-50 text-white':' hover:text-blue-500'"
             @click="switchTabs(t.id)"
             >
                 {{ t.name }}</button>

@@ -1,6 +1,6 @@
 <template>
      <section class="a-container py-2" id="skills">
-        <UITitles text="Skills" link="#skills"/>
+        <UITitles text="Skills" color="after:bg-indigo-500" link="#skills"/>
         <p ref="skillsSection">Below is a list of skills which define my passion.</p>
         <UICompetenciesTab/>
 

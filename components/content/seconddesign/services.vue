@@ -2,9 +2,10 @@
     <section class="bg-teal-50 mt-5 border-y-1 border-gray-200" id="services" >
         <div class="a-container py-5 ">
             <UITitles text="Services" link="#services" color="after:bg-teal-400" ref="servicesSection"/>
+            <p class="mb-8">Here’s a list of services that reflect what I love to create and deliver.</p>
             <section class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
                 <template v-for="s in services" :key="s.id">
-                    <div class="p-4 rounded-sm bg-white  shadow-md hover:shadow-lg">
+                    <div class="p-4 rounded-sm bg-white hover:-translate-y-1.5  shadow-md hover:shadow-lg">
                         <div class="p-3 w-1/5 text-center flex items-center justify-center text-white
                          rounded-sm" :class="`bg-${s.color}-500`">
                             <Icon :name="s.icon" class="text-lg"/>
@@ -48,20 +49,27 @@ const services=ref<Services[]>([
         icon:'ri:focus-3-line',
         color:'emerald',
         title:'Brand visuals',
-        description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
+        description:'Designing consistent and impactful visual assets like iconography, and style guides to unify your identity.'
     },
     {
         id:4,
         icon:'ri:mac-line',
         color:'sky',
         title:'UI mockups',
-        description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
+        description:'Crafting clean, interactive UI-mockups that illustrate layout, flow, and usability prior to full development.'
     },
     {
         id:5,
         icon:'ri:pencil-fill',
         color:'orange',
         title:'Content writing',
+        description:'Writing clear, engaging, and SEO-friendly content for websites, blogs, and digital platforms to support your brand voice.'
+    },
+    {
+        id:6,
+        icon:'ri:bar-chart-fill',
+        color:'purple',
+        title:'SEO setup',
         description:'Designing logos, branding materials, social media graphics, resumes, and other visual assets.'
     }
 ])
