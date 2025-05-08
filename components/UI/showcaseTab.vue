@@ -15,7 +15,7 @@
     <section>
     <div class="a-tab-list my-10">
         <template v-for="t in tabButtons" :key="t.id">
-            <button type="button" class="rounded-lg hover:bg-neutral-900" :class="t.isActive?'bg-white hover:bg-white text-teal-900':''"
+            <button type="button" class="rounded-full " :class="t.isActive?'bg-indigo-600 hover:bg-indigo-600 text-white':'hover:text-indigo-600'"
             @click="switchTabs(t.id)"
             >
                 {{ t.name }}</button>
@@ -26,15 +26,15 @@
     <Transition name="tab">
     <div v-show="tabsVisibility[0]" class="a-tab-grid">
         <template v-for="l in languagesTab" :key="l.id">
-            <article class=" bg-neutral-900 group rounded-md">
+            <article class=" bg-white shadow-md hover:shadow-lg group rounded-md">
                 <div>
                 <NuxtImg :src="l.image" :alt="l.alt"/>
                 </div>
                 <div class="p-4">
-                    <h3 class="font-[Inter] " >{{ l.name }}</h3>
+                    <div class="text-xl md:text-2xl font-bold mb-4">{{ l.name }}</div>
                     <p>{{ l.description }}</p>
                     <div class="a-tag-flex">
-                        <NuxtLink :href="l.link" target="_blank" class="text-blue-400 hover:underline">Visit Website <Icon name="heroicons:arrow-top-right-on-square"/></NuxtLink>
+                        <NuxtLink :href="l.link" target="_blank" class="text-blue-600 hover:underline">Visit Website <Icon name="heroicons:arrow-top-right-on-square"/></NuxtLink>
                     </div>
                 </div>
             </article>
