@@ -5,6 +5,7 @@
         <ContentSeconddesignSkills/>
         <ContentSeconddesignServices/>
         <ContentSeconddesignShowcase/>
+        <UIMainLightbox/>
 
     </div>
 </template>
