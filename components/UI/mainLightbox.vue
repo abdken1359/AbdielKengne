@@ -13,13 +13,13 @@
 </style>
 <template>
     <Transition name="lightbox">
-    <div class="bg-neutral-900/80 fixed top-0 left-0 right-0 overflow-hidden bottom-0 z-50" 
+    <div class="bg-black/80 fixed top-0 left-0 right-0 overflow-hidden bottom-0 z-50" 
     v-show="utils.isLightboxVisible" @click.stop="blockScroll()">
-        <button class="absolute top-10 right-10 z-50" aria-label="Close Lightbox" @click.stop="utils.closeLightBox">
-            <Icon name="fe:close" class="text-3xl md:text-2xl lg:text-4xl"/>
+        <button class="absolute top-10 right-10 bg-white z-50" aria-label="Close Lightbox" @click.stop="utils.closeLightBox">
+            <Icon name="fe:close" class="text-xl md:text-2xl lg:text-2xl"/>
         </button>
         <section class="flex align-center gap-1 md:gap-4 a-container h-[80vh] md:h-[80vh] mx-auto">
-            <button class="relative  h-max my-auto w-max mr-auto disabled:text-gray-400 disabled:cursor-auto flex-1
+            <button class="relative text-white  h-max my-auto w-max mr-auto disabled:text-gray-400 disabled:cursor-auto flex-1
             " @click.stop="utils.previousImage()"
             :disabled="utils.isPreviousButtonDisabled"
             >
@@ -29,7 +29,7 @@
             <img :src="utils.imageQueue[utils.imageLightBoxIndex]?.image" :alt="utils.imageInViewAlt" v-show="utils.isLightboxVisible" 
             class="mx-auto md:flex-1 h-[30vh]   md:h-auto my-auto md:w-1/2" @click="blockScroll()"/>
         </Transition>
-            <button class="relative h-max my-auto ml-auto disabled:text-gray-400 disabled:cursor-auto flex-1" 
+            <button class="relative h-max my-auto text-white ml-auto disabled:text-gray-400 disabled:cursor-auto flex-1" 
             @click.stop="utils.nextImage()" :disabled="utils.isNextButtonDisabled">
                 <Icon name="fe:arrow-right" class="text-xl md:text-4xl lg:text-5xl"/>
             </button>

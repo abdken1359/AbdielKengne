@@ -46,7 +46,7 @@
     <div v-show="tabsVisibility[1]" class="a-logo-grid">
        <template v-for="l in logosTab" :key="l.id">
     <article class="a-logo-section">
-        <NuxtImg :src="l.image" :alt="l.alt" @click="showLightBox(l.image,l.alt,logosTab)"/>
+        <NuxtImg :src="l.image" class=" mx-auto" :alt="l.alt" @click="showLightBox(l.image,l.alt,logosTab)"/>
     </article>
 </template>
         

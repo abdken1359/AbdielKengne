@@ -100,12 +100,12 @@
         }
     }
     .a-logo-grid{
-        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center mx-auto gap-4;
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center mx-auto gap-y-4;
 
     
         .a-logo-section{
 
-            @apply rounded-none overflow-hidden mx-auto w-full  bg-white;
+            @apply rounded-none overflow-hidden mx-auto w-[90%];
 
             img{
                 @apply hover:scale-110 cursor-pointer w-full  active:scale-100 object-center;
