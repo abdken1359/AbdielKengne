@@ -20,7 +20,7 @@
 </style>
 <template>
     <Transition name="menu">
-    <section class="py-4 relative text-center block lg:hidden bg-white shadow-md shadow-gray-100" v-show="useful.showNavMenu">
+    <section class="py-4 relative isolate text-center block lg:hidden bg-white shadow-md shadow-gray-100" v-show="useful.showNavMenu">
      <nav>
         <ul>
             

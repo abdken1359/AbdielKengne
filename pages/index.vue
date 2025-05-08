@@ -4,6 +4,7 @@
         <ContentSeconddesignAboutsection/>
         <ContentSeconddesignSkills/>
         <ContentSeconddesignServices/>
+        <ContentSeconddesignShowcase/>
 
     </div>
 </template>

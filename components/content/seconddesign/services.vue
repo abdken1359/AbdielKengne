@@ -1,8 +1,8 @@
 <template>
     <section class="bg-teal-50 mt-5 border-y-1 border-gray-200" id="services" >
-        <div class="a-container py-5 ">
+        <div class="a-container">
             <UITitles text="Services" link="#services" color="after:bg-teal-400" ref="servicesSection"/>
-            <p class="mb-8">Here’s a list of services that reflect what I love to create and deliver.</p>
+            <p class="mb-5">My goal is to deliver suitable and high quality services to my clients.</p>
             <section class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
                 <template v-for="s in services" :key="s.id">
                     <div class="p-4 rounded-sm bg-white hover:-translate-y-1.5  shadow-md hover:shadow-lg">
@@ -46,14 +46,14 @@ const services=ref<Services[]>([
     },
     {
         id:3,
-        icon:'ri:focus-3-line',
+        icon:'ri:eye-fill',
         color:'emerald',
         title:'Brand visuals',
         description:'Designing consistent and impactful visual assets like iconography, and style guides to unify your identity.'
     },
     {
         id:4,
-        icon:'ri:mac-line',
+        icon:'ri:layout-4-fill',
         color:'sky',
         title:'UI mockups',
         description:'Crafting clean, interactive UI-mockups that illustrate layout, flow, and usability prior to full development.'
