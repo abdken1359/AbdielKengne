@@ -53,17 +53,13 @@
     </div>
 </Transition>
 <Transition name="tab">
-    <div v-show="tabsVisibility[2]" class="a-tab-grid">
-        <template v-for="w in designTab" :key="w.id">
-            <article class=" bg-neutral-900 mx-auto group rounded-md overflow-hidden">
-                <div>
-                <NuxtImg :src="w.image" :alt="w.alt" class="h-[250px] group-hover:scale-x-105 "/>
-                </div>
-                <div class="p-4">
-                    <h3 class="font-[Inter]">{{ w.name }}</h3>
-                    <p>{{ w.description }}</p>
-                </div>
-            </article>
+    <div v-show="tabsVisibility[2]" class="a-logo-grid">
+        <template v-for="p in postersTab" :key="p.id">
+            
+   <article class="a-logo-section">
+        <NuxtImg :src="p.image" class=" mx-auto" :alt="p.alt" @click="showLightBox(p.image,p.alt,postersTab)"/>
+    </article>
+          
         </template>
         
     </div>
@@ -148,11 +144,16 @@ const showcase=ref([
         id:12,type:'logos',
         image:'/Images/showcase/logos/sunnybites.jpg',alt:'Sunny Bites Logo',inview:false,
     },
+     {
+        id:13,type:'posters',
+        image:'/Images/showcase/posters/glamor.png',alt:'Glamor poster Logo',inview:false,
+    },
     {
-        id:13,type:'design',name:'Canva',description:'User-friendly graphic design platform that allows you to create visuals, presentations, and social media content.',
-        image:'/Images/competencies/canva.png',alt:'Canva Image'
-    }
-    
+        id:14,type:'posters',
+        image:'/Images/showcase/posters/starfashion.png',alt:'Starfashion poster Logo',inview:false,
+    },
+
+   
 ])
 const languagesTab=computed(()=>{
     return showcase.value.filter((c)=>{
@@ -164,9 +165,9 @@ const logosTab=computed(()=>{
         return c.type==="logos"
     })
 })
-const designTab=computed(()=>{
+const postersTab=computed(()=>{
     return showcase.value.filter((c)=>{
-        return c.type==="design"
+        return c.type==="posters"
     })
 })
 const tabButtons=ref([
@@ -177,7 +178,7 @@ const tabButtons=ref([
         id:2,name:'Logos',isActive:false
     },
     {
-        id:3,name:'Flyers',isActive:false
+        id:3,name:'Posters',isActive:false
     },
     {
         id:4,name:'Cards',isActive:false
